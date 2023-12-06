@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40A0822D2B20AA7C00A3493D /* DocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0822C2B20AA7C00A3493D /* DocumentTableViewController.swift */; };
+		40A0822F2B20C68100A3493D /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 40A0822E2B20C68000A3493D /* Assets */; };
 		8C8870832B20A1540033B181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8870822B20A1540033B181 /* AppDelegate.swift */; };
 		8C8870852B20A1540033B181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8870842B20A1540033B181 /* SceneDelegate.swift */; };
 		8C8870872B20A1540033B181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8870862B20A1540033B181 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		40A0822C2B20AA7C00A3493D /* DocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewController.swift; sourceTree = "<group>"; };
+		40A0822E2B20C68000A3493D /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		8C88707F2B20A1540033B181 /* Document App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Document App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8870822B20A1540033B181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8870842B20A1540033B181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		8C8870812B20A1540033B181 /* Document App */ = {
 			isa = PBXGroup;
 			children = (
+				40A0822E2B20C68000A3493D /* Assets */,
 				8C8870822B20A1540033B181 /* AppDelegate.swift */,
 				8C8870842B20A1540033B181 /* SceneDelegate.swift */,
 				8C8870862B20A1540033B181 /* ViewController.swift */,
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C88708F2B20A1550033B181 /* LaunchScreen.storyboard in Resources */,
+				40A0822F2B20C68100A3493D /* Assets in Resources */,
 				8C88708C2B20A1550033B181 /* Assets.xcassets in Resources */,
 				8C88708A2B20A1540033B181 /* Main.storyboard in Resources */,
 			);

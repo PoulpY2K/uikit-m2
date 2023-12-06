@@ -41,7 +41,31 @@ extension Int {
 class DocumentTableViewController: UITableViewController {
     
     let cellIdentifier = "DocumentCell"
+    let rootFolder: String = Bundle.main.bundlePath + "/Assets/Images"
     
+    var documents : [DocumentFile] = []
+    
+    func loadFiles() {
+        let fm = FileManager()
+        do {
+            let filesName = try fm.contentsOfDirectory(atPath: rootFolder)
+            filesName.forEach {
+                let url = URL(fileURLWithPath: rootFolder + "/" + $0)
+                do {
+                    let values = try url.resourceValues(forKeys: [.typeIdentifierKey, .nameKey, .fileSizeKey])
+                    documents.append(DocumentFile(title: values.name!, size: values.fileSize!, url: url, type: values.typeIdentifier!))
+                } catch {
+                    print("Couldn't load file \($0)")
+                }
+            }
+        } catch {
+            print("Couldn't find folder")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadFiles()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,15 +84,14 @@ class DocumentTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DocumentFile.documents.count
+        return documents.count
     }
     
     // Indique au Controller comment remplir la cellule avec les données
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        
-        cell.textLabel!.text = DocumentFile.documents[indexPath.row].title
-        cell.detailTextLabel!.text = DocumentFile.documents[indexPath.row].size.formattedSize()
+        cell.textLabel!.text = documents[indexPath.row].title
+        cell.detailTextLabel!.text = documents[indexPath.row].size.formattedSize()
         return cell
     }
     

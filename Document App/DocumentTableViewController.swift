@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import QuickLook
 
 struct DocumentFile {
     var title: String
@@ -38,8 +39,8 @@ extension Int {
     }
 }
 
-class DocumentTableViewController: UITableViewController {
-    
+class DocumentTableViewController: UITableViewController, QLPreviewControllerDataSource {
+    var selectedDocumentIndex: Int?
     let cellIdentifier = "DocumentCell"
     let rootFolder: String = Bundle.main.bundlePath + "/Assets/Images"
     
@@ -60,20 +61,6 @@ class DocumentTableViewController: UITableViewController {
             }
         } catch {
             print("Couldn't find folder")
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // 1. Récuperer l'index de la ligne sélectionnée
-        if let indexPath = sender as? IndexPath {
-            // 2. Récuperer le document correspondant à l'index
-            let document = documents[indexPath.row]
-            // 3. TODO: Cibler l'instance de DocumentViewController via le segue.destination
-            print(document)
-            // 4. Caster le segue.destination en DocumentViewController
-            let destination = segue.destination as? DocumentViewController
-            // 5. Remplir la variable imageName de l'instance de DocumentViewController avec le nom de l'image du document
-            destination!.imageName = document.imageName
         }
     }
     
@@ -107,6 +94,34 @@ class DocumentTableViewController: UITableViewController {
         cell.textLabel!.text = documents[indexPath.row].title
         cell.detailTextLabel!.text = documents[indexPath.row].size.formattedSize()
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedDocumentIndex = indexPath.row
+        showPreviewController()
+    }
+    
+    func showPreviewController() {
+        guard selectedDocumentIndex != nil else { return }
+        
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        
+        navigationController?.pushViewController(previewController, animated: true)
+    }
+    
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        return 1
+    }
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        guard let selectedDocumentIndex = selectedDocumentIndex else {
+            fatalError("Selected document index is nil.")
+        }
+        
+        let selectedDocument = documents[selectedDocumentIndex]
+        
+        return selectedDocument.url as QLPreviewItem
     }
     
     /*

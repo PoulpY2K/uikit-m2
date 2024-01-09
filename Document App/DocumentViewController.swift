@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import QuickLook
 
-class DocumentViewController: UIViewController {
+class DocumentViewController: QLPreviewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var imageName: String?

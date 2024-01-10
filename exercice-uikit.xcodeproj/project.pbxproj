@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		40A0822C2B20AA7C00A3493D /* DocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewController.swift; sourceTree = "<group>"; };
 		40A0822E2B20C68000A3493D /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		8C88707F2B20A1540033B181 /* Document App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Document App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C88707F2B20A1540033B181 /* exercice-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exercice-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8870822B20A1540033B181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8870842B20A1540033B181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C8870862B20A1540033B181 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		8C8870762B20A1540033B181 = {
 			isa = PBXGroup;
 			children = (
-				8C8870812B20A1540033B181 /* Document App */,
+				8C8870812B20A1540033B181 /* exercice-uikit */,
 				8C8870802B20A1540033B181 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		8C8870802B20A1540033B181 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C88707F2B20A1540033B181 /* Document App.app */,
+				8C88707F2B20A1540033B181 /* exercice-uikit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C8870812B20A1540033B181 /* Document App */ = {
+		8C8870812B20A1540033B181 /* exercice-uikit */ = {
 			isa = PBXGroup;
 			children = (
 				40A0822E2B20C68000A3493D /* Assets */,
@@ -70,15 +70,15 @@
 				8C88708B2B20A1550033B181 /* Assets.xcassets */,
 				8C8870902B20A1550033B181 /* Info.plist */,
 			);
-			path = "Document App";
+			path = "exercice-uikit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C88707E2B20A1540033B181 /* Document App */ = {
+		8C88707E2B20A1540033B181 /* exercice-uikit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C8870932B20A1550033B181 /* Build configuration list for PBXNativeTarget "Document App" */;
+			buildConfigurationList = 8C8870932B20A1550033B181 /* Build configuration list for PBXNativeTarget "exercice-uikit" */;
 			buildPhases = (
 				8C88707B2B20A1540033B181 /* Sources */,
 				8C88707C2B20A1540033B181 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "Document App";
+			name = "exercice-uikit";
 			productName = "Document App";
-			productReference = 8C88707F2B20A1540033B181 /* Document App.app */;
+			productReference = 8C88707F2B20A1540033B181 /* exercice-uikit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C88707A2B20A1540033B181 /* Build configuration list for PBXProject "Document App" */;
+			buildConfigurationList = 8C88707A2B20A1540033B181 /* Build configuration list for PBXProject "exercice-uikit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C88707E2B20A1540033B181 /* Document App */,
+				8C88707E2B20A1540033B181 /* exercice-uikit */,
 			);
 		};
 /* End PBXProject section */
@@ -354,7 +354,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C88707A2B20A1540033B181 /* Build configuration list for PBXProject "Document App" */ = {
+		8C88707A2B20A1540033B181 /* Build configuration list for PBXProject "exercice-uikit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C8870912B20A1550033B181 /* Debug */,
@@ -363,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C8870932B20A1550033B181 /* Build configuration list for PBXNativeTarget "Document App" */ = {
+		8C8870932B20A1550033B181 /* Build configuration list for PBXNativeTarget "exercice-uikit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C8870942B20A1550033B181 /* Debug */,
